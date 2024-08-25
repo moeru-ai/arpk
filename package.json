@@ -20,8 +20,10 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.12.1",
+    "dotenv": "^16.4.5",
     "hono": "^4.5.8",
-    "ollama": "^0.5.8"
+    "ollama": "^0.5.8",
+    "std-env": "^3.7.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.1",

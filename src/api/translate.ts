@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { Ollama } from 'ollama'
+import { env } from 'std-env'
 
 import { languages } from '../lib/languages'
 
@@ -35,7 +36,7 @@ export const translate = new Hono()
           role: 'user',
         },
       ],
-      model: 'gemma2',
+      model: env.ARPK_ENV ?? 'llama3.1',
     })
 
     return c.json({
