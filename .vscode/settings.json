@@ -46,9 +46,9 @@
     "pcss",
     "postcss"
   ],
-  
+
   // Enable unstable_ts_config
-   "eslint.options": {
+  "eslint.options": {
     "flags": ["unstable_ts_config"]
-  },
+  }
 }
