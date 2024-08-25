@@ -36,7 +36,7 @@ export const translate = new Hono()
           role: 'user',
         },
       ],
-      model: env.ARPK_ENV ?? 'llama3.1',
+      model: env.ARPK_MODEL ?? 'llama3.1',
     })
 
     return c.json({
