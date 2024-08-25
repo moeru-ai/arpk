@@ -1,0 +1,9 @@
+{
+  "extends": "@importantimport/tsconfig/app.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "types": ["node"]
+  },
+  "include": ["src"]
+}

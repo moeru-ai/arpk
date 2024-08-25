@@ -1,0 +1,34 @@
+{
+  "name": "arpk",
+  "type": "module",
+  "bin": "./dist/cli.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "pkgroll",
+    "dev": "tsx watch src/serve.ts",
+    "lint": "eslint --flag unstable_ts_config .",
+    "lint:fix": "eslint --flag unstable_ts_config --fix ."
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.12.1",
+    "hono": "^4.5.8"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.27.1",
+    "@importantimport/eslint-config": "1.0.0-alpha.1",
+    "@importantimport/tsconfig": "^0.1.1",
+    "@types/eslint": "^9.6.0",
+    "@types/node": "^22.5.0",
+    "eslint": "^9.9.0",
+    "jiti": "^1.21.6",
+    "pkgroll": "^2.4.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.8.0"
+}

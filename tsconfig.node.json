@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "@importantimport/tsconfig/node.json",
+    "@importantimport/tsconfig/parts/check-js.json"
+  ],
+  "include": ["*.config.ts", "*.config.js"]
+}
