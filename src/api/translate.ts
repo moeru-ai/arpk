@@ -46,7 +46,7 @@ export const translate = new Hono()
       code: 200,
       data: response.message.content,
       id: Date.now(),
-      method: 'Free',
+      method: 'ARPK',
       source_lang,
       target_lang,
     })
