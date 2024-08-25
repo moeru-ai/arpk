@@ -4,7 +4,9 @@ import { env } from 'std-env'
 
 import { languages } from '../lib/languages'
 
-const ollama = new Ollama()
+const ollama = new Ollama({
+  fetch,
+})
 
 export interface Options {
   /** The language code of the source text. */
