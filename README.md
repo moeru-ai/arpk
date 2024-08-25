@@ -20,7 +20,7 @@ ARPK_MODEL="llama3.1" npx arpk
 
 ### API
 
-`/translate`, `api/v1/translate` and `api/v2/translate` are connected to the same translation endpoint.
+`/translate`, `/api/v1/translate` and `/api/v2/translate` are connected to the same translate endpoint.
 
 ```ts
 await fetch('http://127.0.0.1:1188/translate', {
