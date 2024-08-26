@@ -38,7 +38,7 @@ export const translate = new Hono()
     return c.json({
       alternates: [],
       code: 200,
-      data: response,
+      data: response.trim(),
       id: Date.now(),
       method: 'ARPK',
       source_lang,
