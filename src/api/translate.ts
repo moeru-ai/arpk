@@ -29,9 +29,9 @@ export const translate = new Hono()
       prompt: text,
       system: [
         'You are a professional translator.',
-        `Please translate the following in ${sourceLangName} into ${targetLangName},`,
-        'do not give any text or line breaks other than the translated content,',
-        'and do not insert line breaks at the end:',
+        `please translate the following in ${sourceLangName} into ${targetLangName},`,
+        'do not give any text other than the translated content,',
+        'and trim the end spaces at the end:',
       ].join(' '),
     })
 
