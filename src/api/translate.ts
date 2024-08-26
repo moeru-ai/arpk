@@ -31,7 +31,7 @@ export const translate = new Hono()
         'You are a professional translator.',
         `please translate the following in ${sourceLangName} into ${targetLangName},`,
         'do not give any text other than the translated content,',
-        'and trim the end spaces at the end:',
+        'and trim the spaces at the end:',
       ].join(' '),
     })
 
