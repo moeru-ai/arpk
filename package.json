@@ -1,7 +1,7 @@
 {
   "name": "arpk",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@9.8.0",
   "license": "MIT",
   "homepage": "https://github.com/moeru-ai/arpk",
@@ -16,7 +16,9 @@
   "bin": "./dist/cli.js",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
