@@ -6,6 +6,7 @@ import { languages } from '../lib/languages'
 
 const ollama = new Ollama({
   fetch,
+  host: env.ARPK_OLLAMA_HOST ?? 'http://127.0.0.1:11434'
 })
 
 export interface Options {
