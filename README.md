@@ -4,6 +4,17 @@
 
 ## Usage
 
+### Prepare
+
+You need to run Ollama and download the model you want to use.
+
+https://ollama.com/
+
+```bash
+ollama serve
+ollama pull llama3.1
+```
+
 ### Run
 
 #### npm
@@ -34,7 +45,7 @@ await fetch('http://127.0.0.1:1188/translate', {
 // {
 //   alternates: [],
 //   code: 200,
-//   data: '雨季过去，天空中清晰透彻。一个人静静地望着天空，陷入沉思。',
+//   data: '雨季过后，晴朗的天空下我独自遐思。',
 //   id: 1519129853500,
 //   method: 'ARPK',
 //   source_lang: 'JA',
@@ -43,6 +54,8 @@ await fetch('http://127.0.0.1:1188/translate', {
 ```
 
 ### Environments
+
+> Currently only Bearer Auth is supported when using `ARPK_TOKEN`, not URL Params.
 
 <!-- https://www.tablesgenerator.com/markdown_tables -->
 
