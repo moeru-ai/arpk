@@ -50,6 +50,7 @@ await fetch('http://127.0.0.1:1188/translate', {
 |------------------|------------------------|------------------------------------|
 | ARPK_PORT        | 1188                   | The port the server will listen on |
 | ARPK_MODEL       | llama3.1               | Model to be used by the ARPK       |
+| ARPK_TOKEN       | null                   | Access token to protect your API   |
 | ARPK_OLLAMA_HOST | http://127.0.0.1:11434 | The Ollama host address            |
 
 ## License

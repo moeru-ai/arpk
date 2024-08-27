@@ -3,11 +3,14 @@ import { Ollama } from 'ollama'
 import { env } from 'std-env'
 
 import { languages } from '../lib/languages'
+import { bearerAuth } from 'hono/bearer-auth'
 
 const ollama = new Ollama({
   fetch,
   host: env.ARPK_OLLAMA_HOST ?? 'http://127.0.0.1:11434'
 })
+
+const token = env.ARPK_TOKEN
 
 export interface Options {
   /** The language code of the source text. */
@@ -19,7 +22,7 @@ export interface Options {
 }
 
 export const translate = new Hono()
-  .post('/', async (c) => {
+  .post('/', ...(token ? [bearerAuth({ token })] : []), async (c) => {
     const { source_lang, target_lang, text } = await c.req.json<Options>()
 
     const sourceLangName = languages.find(({ language }) => language === source_lang)?.name ?? source_lang
