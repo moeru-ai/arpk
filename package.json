@@ -30,7 +30,9 @@
     "build": "pkgroll",
     "dev": "tsx watch src/serve.ts",
     "lint": "eslint --flag unstable_ts_config .",
-    "lint:fix": "eslint --flag unstable_ts_config --fix ."
+    "lint:fix": "eslint --flag unstable_ts_config --fix .",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
   "dependencies": {
     "@hono/node-server": "^1.12.1",
@@ -49,6 +51,7 @@
     "jiti": "^1.21.6",
     "pkgroll": "^2.4.2",
     "tsx": "^4.7.1",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   }
 }
