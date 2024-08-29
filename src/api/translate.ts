@@ -1,13 +1,13 @@
 import { Hono } from 'hono'
+import { bearerAuth } from 'hono/bearer-auth'
 import { Ollama } from 'ollama'
 import { env } from 'std-env'
 
 import { languages } from '../lib/languages'
-import { bearerAuth } from 'hono/bearer-auth'
 
 const ollama = new Ollama({
   fetch,
-  host: env.ARPK_OLLAMA_HOST ?? 'http://127.0.0.1:11434'
+  host: env.ARPK_OLLAMA_HOST ?? 'http://127.0.0.1:11434',
 })
 
 const token = env.ARPK_TOKEN
