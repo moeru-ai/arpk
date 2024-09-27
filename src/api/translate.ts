@@ -26,7 +26,7 @@ export const translate = new Hono()
     const { source_lang, target_lang, text } = await c.req.json<Options>()
 
     const { response } = await ollama.generate({
-      model: env.ARPK_MODEL ?? 'llama3.1',
+      model: env.ARPK_MODEL ?? 'llama3.2',
       prompt: text,
       system: systemPrompt({ source_lang, target_lang }),
     })

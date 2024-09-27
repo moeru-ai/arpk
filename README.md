@@ -12,7 +12,7 @@ https://ollama.com/
 
 ```bash
 ollama serve
-ollama pull llama3.1
+ollama pull llama3.2
 ```
 
 ### Run
@@ -22,7 +22,7 @@ ollama pull llama3.1
 You can run ARPK directly without installation.
 
 ```bash
-ARPK_MODEL="llama3.1" npx arpk
+ARPK_MODEL="llama3.2" npx arpk
 ```
 
 #### container
@@ -62,7 +62,7 @@ await fetch('http://127.0.0.1:1188/translate', {
 | Environment        | Default                                                       | Description                        |
 |--------------------|---------------------------------------------------------------|------------------------------------|
 | ARPK_PORT          | 1188                                                          | The port the server will listen on |
-| ARPK_MODEL         | llama3.1                                                      | Model to be used by the ARPK       |
+| ARPK_MODEL         | llama3.2                                                      | Model to be used by the ARPK       |
 | ARPK_TOKEN         | null                                                          | Access token to protect your API   |
 | ARPK_OLLAMA_HOST   | http://127.0.0.1:11434                                        | The Ollama host address            |
 | ARPK_SYSTEM_PROMPT | https://github.com/moeru-ai/arpk/blob/main/src/lib/prompts.ts | System prompt                      |
