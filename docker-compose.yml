@@ -1,0 +1,8 @@
+services:
+  arpk:
+    build: .
+    container_name: arpk
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      - ARPK_MODEL=gemma2
