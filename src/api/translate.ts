@@ -3,6 +3,7 @@ import { bearerAuth } from 'hono/bearer-auth'
 import { Ollama } from 'ollama'
 import { env } from 'std-env'
 
+import { version } from '../../package.json' with { type: 'json' }
 import { systemPrompt } from '../lib/prompts'
 
 const ollama = new Ollama({
@@ -25,8 +26,10 @@ export const translate = new Hono()
   .post('/', ...(token ? [bearerAuth({ token })] : []), async (c) => {
     const { source_lang, target_lang, text } = await c.req.json<Options>()
 
+    const model = env.ARPK_MODEL ?? 'llama3.2'
+
     const { response } = await ollama.generate({
-      model: env.ARPK_MODEL ?? 'llama3.2',
+      model,
       prompt: text,
       system: systemPrompt({ source_lang, target_lang }),
     })
@@ -36,7 +39,7 @@ export const translate = new Hono()
       code: 200,
       data: response.trim(),
       id: Date.now(),
-      method: 'ARPK',
+      method: `ARPK v${version} (${model})`,
       source_lang,
       target_lang,
     })

@@ -47,7 +47,7 @@ await fetch('http://127.0.0.1:1188/translate', {
 //   code: 200,
 //   data: '雨季过后，晴朗的天空下我独自遐思。',
 //   id: 1519129853500,
-//   method: 'ARPK',
+//   method: 'ARPK v0.0.0 (llama3.2)',
 //   source_lang: 'JA',
 //   target_lang: 'ZH'
 // }
