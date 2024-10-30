@@ -6,9 +6,7 @@
 
 ### Prepare
 
-You need to run Ollama and download the model you want to use.
-
-https://ollama.com/
+You need to run [Ollama](https://ollama.com/) and download the model you want to use.
 
 ```bash
 ollama serve
@@ -19,7 +17,7 @@ ollama pull llama3.2
 
 #### npm
 
-You can run ARPK directly without installation.
+If you have [Node.js](https://nodejs.org) installed, you can run ARPK directly without installing it.
 
 ```bash
 ARPK_MODEL="llama3.2" npx arpk
