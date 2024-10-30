@@ -11,6 +11,7 @@ const ollama = new Ollama({
   host: env.ARPK_OLLAMA_HOST ?? 'http://127.0.0.1:11434',
 })
 
+const model = env.ARPK_MODEL ?? 'llama3.2'
 const token = env.ARPK_TOKEN
 
 export interface Options {
@@ -25,8 +26,6 @@ export interface Options {
 export const translate = new Hono()
   .post('/', ...(token ? [bearerAuth({ token })] : []), async (c) => {
     const { source_lang, target_lang, text } = await c.req.json<Options>()
-
-    const model = env.ARPK_MODEL ?? 'llama3.2'
 
     const { response } = await ollama.generate({
       model,
