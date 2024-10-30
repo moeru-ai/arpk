@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "pkgroll",
+    "bump": "bumpp",
     "dev": "tsx watch src/serve.ts",
     "lint": "eslint --flag unstable_ts_config .",
     "lint:fix": "eslint --flag unstable_ts_config --fix .",
@@ -47,6 +48,7 @@
     "@importantimport/tsconfig": "^0.1.1",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.8.4",
+    "bumpp": "^9.8.0",
     "eslint": "^9.13.0",
     "jiti": "^2.3.3",
     "pkgroll": "^2.5.1",
