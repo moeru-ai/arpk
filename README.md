@@ -25,9 +25,29 @@ You can run ARPK directly without installation.
 ARPK_MODEL="llama3.2" npx arpk
 ```
 
-#### container
+#### docker
 
-> TODO
+```bash
+docker run -d \
+  --name arpk \
+  --network host \
+  --restart unless-stopped \
+  -e ARPK_MODEL=llama3.2 \
+  ghcr.io/moeru-ai/arpk:latest
+```
+
+#### docker-compose
+
+```yaml
+services:
+  arpk:
+    image: ghcr.io/moeru-ai/arpk:latest
+    container_name: arpk
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      - ARPK_MODEL=llama3.2
+```
 
 ### API
 
