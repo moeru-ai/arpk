@@ -13,7 +13,7 @@
     "translation",
     "ollama"
   ],
-  "bin": "./dist/cli.js",
+  "bin": "./dist/index.js",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
