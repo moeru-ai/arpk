@@ -12,19 +12,20 @@ export interface ServeAppOptions extends CreateTranslateOptions {
   port: number
 }
 
-export const serveApp = ({ model, port, token }: ServeAppOptions) => {
+export const createApp = ({ model, token }: Omit<ServeAppOptions, 'port'>) => {
   const translate = createTranslate({ model, token })
 
-  const { fetch } = new Hono()
+  return new Hono()
     .use(logger())
     .get('/', c => c.text(`ARPK v${version}`))
     .route('/translate', translate)
     .route('/api/v1/translate', translate)
     .route('/api/v2/translate', translate)
     .use(prettyJSON())
+}
 
-  serve({
-    fetch,
-    port,
-  })
+export const serveApp = ({ model, port, token }: ServeAppOptions) => {
+  const { fetch } = createApp({ model, token })
+
+  serve({ fetch, port })
 }
