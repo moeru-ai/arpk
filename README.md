@@ -13,14 +13,40 @@ ollama serve
 ollama pull llama3.2
 ```
 
-### Run
+### Install
 
-#### npm
-
-If you have [Node.js](https://nodejs.org) installed, you can run ARPK directly without installing it.
+First install [Node.js](https://nodejs.org), then install ARPK via your favorite package manager (or npm).
 
 ```bash
-ARPK_MODEL="llama3.2" npx arpk
+npm i -g arpk
+```
+
+You can also use ARPK via `npx` without installing it:
+
+```bash
+npx -y arpk
+```
+
+### Translate
+
+```bash
+arpk translate --from "EN-US" --to "ZH" --input "Hello, World!"
+# 你好，世界！
+
+echo "Hello, World!" | arpk translate --from "EN-US" --to "JA"
+# こんにちは、世界！
+```
+
+### Serve
+
+```bash
+ARPK_MODEL="llama3.2" arpk serve
+```
+
+#### npx
+
+```bash
+ARPK_MODEL="llama3.2" npx -y arpk serve
 ```
 
 #### docker
@@ -47,7 +73,7 @@ services:
       - ARPK_MODEL=llama3.2
 ```
 
-### API
+#### API
 
 `/translate`, `/api/v1/translate` and `/api/v2/translate` are connected to the same translate endpoint.
 
