@@ -19,7 +19,8 @@ const argv = cli({
   flags,
   name,
   version,
-})
+// fix pkgroll build error
+}) as any
 
 setupOllama(argv.flags.ollamaHost)
 

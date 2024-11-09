@@ -28,4 +28,5 @@ export const translate = command({
     },
   },
   name: 'translate',
-})
+// fix pkgroll build error
+}) as any

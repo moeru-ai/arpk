@@ -18,4 +18,5 @@ export const serve = command({
     },
   },
   name: 'serve',
-})
+// fix pkgroll build error
+}) as any
