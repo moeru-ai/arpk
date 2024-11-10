@@ -1,5 +1,5 @@
 /** @see {@link https://developers.deepl.com/docs/api-reference/languages} */
-export const languages = [
+export const generatedLanguages = [
   {
     language: 'BG',
     name: 'Bulgarian',
