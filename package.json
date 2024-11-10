@@ -23,7 +23,7 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "pkgroll",
+    "build": "pkgroll --minify",
     "bump": "bumpp",
     "dev": "tsx src",
     "lint": "eslint --flag unstable_ts_config .",
