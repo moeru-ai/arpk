@@ -2,6 +2,7 @@ import { command } from 'cleye'
 import { fstat } from 'node:fs'
 import { stdin } from 'node:process'
 import { text } from 'node:stream/consumers'
+import { env } from 'std-env'
 
 import { flags } from '../flags'
 
@@ -15,6 +16,7 @@ export const translate = command({
     ...flags,
     from: {
       alias: 'f',
+      default: env.ARPK_SOURCE_LANG,
       type: String,
     },
     input: {
@@ -24,6 +26,7 @@ export const translate = command({
     },
     to: {
       alias: 't',
+      default: env.ARPK_TARGET_LANG,
       type: String,
     },
   },
