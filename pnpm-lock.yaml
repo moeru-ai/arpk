@@ -17,9 +17,6 @@ importers:
       ollama:
         specifier: ^0.5.9
         version: 0.5.9
-      std-env:
-        specifier: ^3.8.0
-        version: 3.8.0
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.8.0

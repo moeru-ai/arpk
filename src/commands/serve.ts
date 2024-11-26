@@ -1,5 +1,5 @@
 import { command } from 'cleye'
-import { env } from 'std-env'
+import { env } from 'node:process'
 
 import { flags } from '../flags'
 

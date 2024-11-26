@@ -1,6 +1,6 @@
 import type { Command } from 'cleye'
 
-import { env } from 'std-env'
+import { env } from 'node:process'
 
 export const flags = {
   model: {

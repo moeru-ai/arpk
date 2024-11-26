@@ -1,8 +1,7 @@
 import { command } from 'cleye'
 import { fstat } from 'node:fs'
-import { stdin } from 'node:process'
+import { env, stdin } from 'node:process'
 import { text } from 'node:stream/consumers'
-import { env } from 'std-env'
 
 import { flags } from '../flags'
 

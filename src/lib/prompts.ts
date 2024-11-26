@@ -1,4 +1,4 @@
-import { env } from 'std-env'
+import { env } from 'node:process'
 
 import { getLanguageName } from './utils'
 
