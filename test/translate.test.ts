@@ -8,7 +8,7 @@ describe('translate', () => {
   it('GET /translate', async () => {
     const date = Date.now()
     const model = 'mistral-nemo'
-    const app = createApp({ model })
+    const app = createApp({ apiBase: 'http://localhost:11434/v1/', apiPath: 'chat/completions', model })
 
     const source_lang = 'EN-US'
     const target_lang = 'ZH'

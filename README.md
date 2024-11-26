@@ -1,12 +1,12 @@
 # ARPK [![npm](https://img.shields.io/npm/v/arpk)](https://npmjs.com/package/arpk)
 
-> Ollama as your translator, with DeepLX-compatible API.
+> LLM as your translator, with DeepLX-compatible API.
 
 ## Usage
 
 ### Prepare
 
-You need to run [Ollama](https://ollama.com/) and download the model you want to use.
+ARPK supports most OpenAI-compatible APIs, [Ollama](https://ollama.com/) is used here as an example (and is also the default):
 
 ```bash
 ollama serve
@@ -108,7 +108,8 @@ await fetch('http://127.0.0.1:1188/translate', {
 | ARPK_PORT | 1188 | The port the server will listen on |
 | ARPK_MODEL | llama3.1 | Model to be used by the ARPK |
 | ARPK_TOKEN | null | Access token to protect your API |
-| ARPK_OLLAMA_HOST | http://127.0.0.1:11434 | The Ollama host address |
+| ARPK_API_BASE | http://127.0.0.1:11434/v1/ | OpenAI-compatible API url base |
+| ARPK_API_PATH | chat/completions | OpenAI-compatible API url path |
 | ARPK_SYSTEM_PROMPT | https://github.com/moeru-ai/arpk/blob/main/src/lib/prompts.ts | System prompt |
 | ARPK_SOURCE_LANG | null | Translate source language (cli only, `--from`) |
 | ARPK_TARGET_LANG | null | Translate target language (cli only, `--to`) |

@@ -7,11 +7,10 @@
   "homepage": "https://github.com/moeru-ai/arpk",
   "repository": "github:moeru-ai/arpk",
   "bugs": "https://github.com/moeru-ai/arpk/issues",
-  "description": "Ollama as your translator, with DeepLX-compatible API.",
+  "description": "LLM as your translator, with DeepLX-compatible API.",
   "keywords": [
     "translator",
-    "translation",
-    "ollama"
+    "translation"
   ],
   "bin": "./dist/index.js",
   "main": "./dist/index.js",
