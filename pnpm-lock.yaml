@@ -14,9 +14,6 @@ importers:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
-      ollama:
-        specifier: ^0.5.9
-        version: 0.5.9
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.8.0
@@ -36,6 +33,9 @@ importers:
       '@types/node':
         specifier: ^22.9.0
         version: 22.9.0
+      '@xsai/generate-text':
+        specifier: ^0.0.10
+        version: 0.0.10
       bumpp:
         specifier: ^9.8.1
         version: 9.8.1
@@ -892,6 +892,12 @@ packages:
 
   '@vue/shared@3.4.38':
     resolution: {integrity: sha512-q0xCiLkuWWQLzVrecPb0RMsNWyxICOjPrcrwxTUEHb1fsnvni4dcuyG7RT/Ie7VPTvnjzIaWzRMUBsrqNj/hhw==}
+
+  '@xsai/generate-text@0.0.10':
+    resolution: {integrity: sha512-1EsHeTUlEJldBZrkqbdfufTkYGB9sLwbDW2VtkH+rCLwwXjeJChokb8rFGpns3AWkg14w+pD2pBCxbGih7X9QQ==}
+
+  '@xsai/shared@0.0.10':
+    resolution: {integrity: sha512-zR5iV851Ms+ThAkHyK7lyiLiuhxraExrjj4mr+jHwxLqsBZnWtgqdtppDCJJhYtSF0AVZKrDeCWdPq+bUz5nBg==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1963,9 +1969,6 @@ packages:
   ohash@1.1.4:
     resolution: {integrity: sha512-FlDryZAahJmEF3VR3w1KogSEdWX3WhA5GPakFx4J81kEAiHyLMpdLLElS8n8dfNadMgAne/MywcvmogzscVt4g==}
 
-  ollama@0.5.9:
-    resolution: {integrity: sha512-F/KZuDRC+ZsVCuMvcOYuQ6zj42/idzCkkuknGyyGVmNStMZ/sU3jQpvhnl4SyC0+zBzLiKNZJnJeuPFuieWZvQ==}
-
   onetime@6.0.0:
     resolution: {integrity: sha512-1FlR+gjXK7X+AsAHso35MnyN5KqGwJRi/31ft6x0M194ht7S+rWAvd7PHss9xSKMzE0asv1pyIHaJYq+BbacAQ==}
     engines: {node: '>=12'}
@@ -2477,9 +2480,6 @@ packages:
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
-
-  whatwg-fetch@3.6.20:
-    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
 
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
@@ -3266,6 +3266,12 @@ snapshots:
       '@vue/shared': 3.4.38
 
   '@vue/shared@3.4.38': {}
+
+  '@xsai/generate-text@0.0.10':
+    dependencies:
+      '@xsai/shared': 0.0.10
+
+  '@xsai/shared@0.0.10': {}
 
   acorn-jsx@5.3.2(acorn@8.12.1):
     dependencies:
@@ -4582,10 +4588,6 @@ snapshots:
 
   ohash@1.1.4: {}
 
-  ollama@0.5.9:
-    dependencies:
-      whatwg-fetch: 3.6.20
-
   onetime@6.0.0:
     dependencies:
       mimic-fn: 4.0.0
@@ -5081,8 +5083,6 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
-
-  whatwg-fetch@3.6.20: {}
 
   which@2.0.2:
     dependencies:

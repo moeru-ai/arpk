@@ -1,14 +1,11 @@
 import { describe, expect, it } from 'vitest'
 
 import { version } from '../package.json' with { type: 'json' }
-import { setupOllama } from '../src/lib/ollama'
 import { createApp } from '../src/server'
 
 describe('translate', () => {
   // eslint-disable-next-line test/prefer-lowercase-title
   it('GET /translate', async () => {
-    setupOllama()
-
     const date = Date.now()
     const model = 'mistral-nemo'
     const app = createApp({ model })

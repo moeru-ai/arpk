@@ -1,6 +1,7 @@
+import { generateText } from '@xsai/generate-text'
+
 import type { RequestBody } from '../server/translate'
 
-import { ollama } from './ollama'
 import { systemPrompt } from './prompts'
 
 export interface TranslateOptions extends RequestBody {
@@ -12,8 +13,16 @@ export const generateTranslate = async ({
   source_lang,
   target_lang,
   text,
-}: TranslateOptions) => await ollama.generate({
+}: TranslateOptions) => await generateText({
+  messages: [
+    {
+      content: systemPrompt({ source_lang, target_lang }),
+      role: 'system',
+    },
+    {
+      content: text,
+      role: 'user',
+    },
+  ],
   model,
-  prompt: text,
-  system: systemPrompt({ source_lang, target_lang }),
-}).then(res => res.response.trim())
+}).then(res => res.text)

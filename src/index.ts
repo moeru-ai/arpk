@@ -5,7 +5,6 @@ import { name, version } from '../package.json' with { type: 'json' }
 import { serve } from './commands/serve'
 import { translate } from './commands/translate'
 import { flags } from './flags'
-import { setupOllama } from './lib/ollama'
 import { generateTranslate } from './lib/translate'
 import { serveApp } from './server'
 
@@ -20,8 +19,6 @@ const argv = cli({
   name,
   version,
 })
-
-setupOllama(argv.flags.ollamaHost)
 
 if (argv.command === 'serve') {
   // eslint-disable-next-line no-console
