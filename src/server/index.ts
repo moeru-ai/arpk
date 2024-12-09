@@ -12,8 +12,8 @@ export interface ServeAppOptions extends CreateTranslateOptions {
   port: number
 }
 
-export const createApp = ({ apiBase, apiPath, model, token }: Omit<ServeAppOptions, 'port'>) => {
-  const translate = createTranslate({ apiBase, apiPath, model, token })
+export const createApp = ({ apiKey, baseURL, model, token }: Omit<ServeAppOptions, 'port'>) => {
+  const translate = createTranslate({ apiKey, baseURL, model, token })
 
   return new Hono()
     .use(logger())
@@ -24,8 +24,8 @@ export const createApp = ({ apiBase, apiPath, model, token }: Omit<ServeAppOptio
     .use(prettyJSON())
 }
 
-export const serveApp = ({ apiBase, apiPath, model, port, token }: ServeAppOptions) => {
-  const { fetch } = createApp({ apiBase, apiPath, model, token })
+export const serveApp = ({ apiKey, baseURL, model, port, token }: ServeAppOptions) => {
+  const { fetch } = createApp({ apiKey, baseURL, model, token })
 
   serve({ fetch, port })
 }

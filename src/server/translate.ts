@@ -7,8 +7,8 @@ import { version } from '../../package.json' with { type: 'json' }
 import { generateTranslate } from '../lib/translate'
 
 export interface CreateTranslateOptions {
-  apiBase: string
-  apiPath: string
+  apiKey?: string
+  baseURL: string
   model: string
   token?: string
 }
@@ -19,8 +19,8 @@ export interface RequestBody extends PromptOptions {
 }
 
 export const createTranslate = ({
-  apiBase,
-  apiPath,
+  apiKey,
+  baseURL,
   model,
   token,
 }: CreateTranslateOptions) => new Hono()
@@ -28,8 +28,8 @@ export const createTranslate = ({
     const { source_lang, target_lang, text } = await c.req.json<RequestBody>()
 
     const data = await generateTranslate({
-      apiBase,
-      apiPath,
+      apiKey,
+      baseURL,
       model,
       source_lang,
       target_lang,

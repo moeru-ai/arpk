@@ -5,20 +5,21 @@ import type { RequestBody } from '../server/translate'
 import { systemPrompt } from './prompts'
 
 export interface TranslateOptions extends RequestBody {
-  apiBase: string
-  apiPath: string
+  apiKey?: string
+  baseURL: string
   model: string
 }
 
 export const generateTranslate = async ({
-  apiBase,
-  apiPath,
+  apiKey,
+  baseURL,
   model,
   source_lang,
   target_lang,
   text,
 }: TranslateOptions) => await generateText({
-  base: apiBase,
+  apiKey,
+  baseURL,
   messages: [
     {
       content: systemPrompt({ source_lang, target_lang }),
@@ -30,5 +31,4 @@ export const generateTranslate = async ({
     },
   ],
   model,
-  path: apiPath,
 }).then(res => res.text)

@@ -3,12 +3,12 @@ import type { Command } from 'cleye'
 import { env } from 'node:process'
 
 export const flags = {
-  apiBase: {
-    default: env.ARPK_API_BASE ?? 'http://localhost:11434/v1/',
+  apiKey: {
+    default: env.ARPK_LLM_API_KEY,
     type: String,
   },
-  apiPath: {
-    default: env.ARPK_API_PATH ?? 'chat/completions',
+  baseURL: {
+    default: env.ARPK_LLM_BASE_URL ?? 'http://localhost:11434/v1/',
     type: String,
   },
   model: {
