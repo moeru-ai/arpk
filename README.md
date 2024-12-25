@@ -40,13 +40,13 @@ echo "Hello, World!" | arpk translate --from "EN-US" --to "JA"
 ### Serve
 
 ```bash
-ARPK_MODEL="llama3.2" arpk serve
+ARPK_LLM_MODEL="llama3.2" arpk serve
 ```
 
 #### npx
 
 ```bash
-ARPK_MODEL="llama3.2" npx -y arpk serve
+ARPK_LLM_MODEL="llama3.2" npx -y arpk serve
 ```
 
 #### docker
@@ -56,7 +56,7 @@ docker run -d \
   --name arpk \
   --network host \
   --restart unless-stopped \
-  -e ARPK_MODEL=llama3.2 \
+  -e ARPK_LLM_MODEL=llama3.2 \
   ghcr.io/moeru-ai/arpk:latest
 ```
 
@@ -70,7 +70,7 @@ services:
     network_mode: host
     restart: unless-stopped
     environment:
-      - ARPK_MODEL=llama3.2
+      - ARPK_LLM_MODEL=llama3.2
 ```
 
 #### API
