@@ -5,4 +5,4 @@ services:
     network_mode: host
     restart: unless-stopped
     environment:
-      - ARPK_MODEL=llama3.2
+      - ARPK_LLM_MODEL=llama3.2
