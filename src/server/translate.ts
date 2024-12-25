@@ -1,5 +1,5 @@
-import { Hono } from 'hono'
 import { bearerAuth } from 'hono/bearer-auth'
+import { Hono } from 'hono/tiny'
 
 import type { PromptOptions } from '../lib/prompts'
 

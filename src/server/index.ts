@@ -1,7 +1,7 @@
 import { serve } from '@hono/node-server'
-import { Hono } from 'hono'
 import { logger } from 'hono/logger'
 import { prettyJSON } from 'hono/pretty-json'
+import { Hono } from 'hono/tiny'
 
 import type { CreateTranslateOptions } from './translate'
 
