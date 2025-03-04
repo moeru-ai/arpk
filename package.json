@@ -1,7 +1,7 @@
 {
   "name": "arpk",
   "type": "module",
-  "version": "0.3.0-beta.5",
+  "version": "0.3.0-beta.6",
   "packageManager": "pnpm@10.0.0",
   "description": "LLM as your translator, with DeepLX-compatible API.",
   "license": "MIT",
