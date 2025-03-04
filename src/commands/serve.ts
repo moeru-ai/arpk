@@ -9,7 +9,7 @@ export const serve = command({
     ...flags,
     port: {
       alias: 'p',
-      default: env.ARPK_PORT ? Number.parseInt(env.ARPK_PORT) : 1188,
+      default: env.ARPK_PORT !== undefined ? Number.parseInt(env.ARPK_PORT) : 1188,
       type: Number,
     },
     token: {
