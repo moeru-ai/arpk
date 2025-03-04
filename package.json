@@ -3,52 +3,50 @@
   "type": "module",
   "version": "0.3.0-beta.4",
   "packageManager": "pnpm@10.0.0",
+  "description": "LLM as your translator, with DeepLX-compatible API.",
   "license": "MIT",
   "homepage": "https://github.com/moeru-ai/arpk",
   "repository": "github:moeru-ai/arpk",
   "bugs": "https://github.com/moeru-ai/arpk/issues",
-  "description": "LLM as your translator, with DeepLX-compatible API.",
   "keywords": [
     "translator",
     "translation"
-  ],
-  "bin": "./dist/index.js",
-  "main": "./dist/index.js",
-  "files": [
-    "dist"
   ],
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
+  "main": "./dist/index.js",
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "pkgroll --minify",
     "bump": "bumpp",
     "dev": "tsx src",
-    "lint": "eslint --flag unstable_ts_config .",
-    "lint:fix": "eslint --flag unstable_ts_config --fix .",
+    "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "cleye": "^1.3.2",
+    "cleye": "^1.3.4",
     "dotenv": "^16.4.7"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@hono/node-server": "^1.13.5",
-    "@importantimport/eslint-config": "1.0.0-alpha.1",
-    "@importantimport/tsconfig": "^0.1.1",
-    "@types/eslint": "^9.6.1",
-    "@types/node": "^22.10.1",
-    "@xsai/generate-text": "^0.0.19",
-    "bumpp": "^9.8.1",
-    "eslint": "^9.16.0",
-    "hono": "^4.6.13",
-    "jiti": "^2.4.1",
-    "pkgroll": "^2.5.1",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "@antfu/eslint-config": "^4.4.0",
+    "@hono/node-server": "^1.13.8",
+    "@importantimport/eslint-config": "^1.0.0-alpha.2",
+    "@importantimport/tsconfig": "^1.0.0-beta.2",
+    "@types/node": "^22.13.9",
+    "@xsai/generate-text": "^0.1.0",
+    "bumpp": "^10.0.3",
+    "eslint": "^9.21.0",
+    "hono": "^4.7.2",
+    "jiti": "^2.4.2",
+    "pkgroll": "^2.11.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
   }
 }

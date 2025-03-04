@@ -1,7 +1,3 @@
-import type { Linter } from 'eslint'
+import { defineConfig } from '@importantimport/eslint-config'
 
-import antfu from '@antfu/eslint-config'
-import ii from '@importantimport/eslint-config'
-
-export default antfu()
-  .append(ii({ functional: false })) as Linter.Config
+export default defineConfig({ typescript: { tsconfigPath: './tsconfig.json' } })
