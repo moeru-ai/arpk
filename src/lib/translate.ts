@@ -17,7 +17,8 @@ export const generateTranslate = async ({
   source_lang,
   target_lang,
   text,
-}: TranslateOptions) => await generateText({
+// eslint-disable-next-line @masknet/no-then
+}: TranslateOptions) => generateText({
   apiKey,
   baseURL,
   messages: [
@@ -31,4 +32,4 @@ export const generateTranslate = async ({
     },
   ],
   model,
-}).then(res => res.text)
+}).then(({ text }) => text)

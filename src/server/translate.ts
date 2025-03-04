@@ -24,7 +24,7 @@ export const createTranslate = ({
   model,
   token,
 }: CreateTranslateOptions) => new Hono()
-  .post('/', ...(token ? [bearerAuth({ token })] : []), async (c) => {
+  .post('/', ...(token !== undefined ? [bearerAuth({ token })] : []), async (c) => {
     const { source_lang, target_lang, text } = await c.req.json<RequestBody>()
 
     const data = await generateTranslate({

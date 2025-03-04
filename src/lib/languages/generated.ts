@@ -74,7 +74,7 @@ export const generatedLanguages = [
   },
   {
     language: 'NB',
-    name: 'Norwegian (Bokmål)',
+    name: 'Norwegian (Bokm\u00E5l)',
   },
   {
     language: 'NL',

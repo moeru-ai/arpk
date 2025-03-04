@@ -14,7 +14,7 @@ const target_lang = '{{target_lang}}'
 
 const defaultSystemPrompt = (options: PromptOptions) => [
   'You are a professional translator.',
-  (!options.source_lang || options.source_lang.toLowerCase() === 'auto')
+  (options.source_lang === undefined || options.source_lang.toLowerCase() === 'auto')
     ? `please translate the following into ${target_lang},`
     : `please translate the following in ${source_lang} into ${target_lang},`,
   'do not give any text other than the translated content,',

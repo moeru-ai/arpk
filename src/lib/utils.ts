@@ -1,6 +1,6 @@
 import { languages } from './languages'
 
 export const getLanguageName = (lang?: string) =>
-  lang
+  lang !== undefined
     ? languages.find(({ language }) => language === lang.toUpperCase())?.name ?? lang
     : ''

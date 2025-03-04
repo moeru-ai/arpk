@@ -1,3 +1,4 @@
+/* eslint-disable @masknet/no-top-level */
 import { cli } from 'cleye'
 import { config } from 'dotenv'
 
@@ -32,7 +33,7 @@ if (argv.command === 'serve') {
   })
 }
 else if (argv.command === 'translate') {
-  if (!argv.flags.to)
+  if (argv.flags.to === undefined)
     console.error('Missing flags: --to')
 
   if (!argv.flags.input || argv.flags.input.length < 1)
@@ -45,6 +46,6 @@ else if (argv.command === 'translate') {
     model: argv.flags.model,
     source_lang: argv.flags.from,
     target_lang: argv.flags.to!,
-    text: argv.flags.input!,
+    text: argv.flags.input,
   }))
 }
