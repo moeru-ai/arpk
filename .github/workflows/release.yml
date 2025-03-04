@@ -24,8 +24,11 @@ jobs:
         with:
           node-version: 22
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       - run: pnpm build
+      - run: pnpm dlx changelogithub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: pnpm publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
