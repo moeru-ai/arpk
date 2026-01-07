@@ -7,7 +7,7 @@ export const flags = {
     default: env.ARPK_LLM_API_KEY,
     type: String,
   },
-  baseURL: {
+  baseUrl: {
     default: env.ARPK_LLM_BASE_URL ?? 'http://localhost:11434/v1/',
     type: String,
   },
