@@ -30,16 +30,16 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "cleye": "^1.3.4",
-    "dotenv": "^16.6.1"
+    "cleye": "^2.2.1",
+    "dotenv": "^17.2.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.19.0",
+    "@antfu/eslint-config": "^6.7.3",
     "@hono/node-server": "^1.19.7",
     "@importantimport/eslint-config": "^1.0.0-beta.2",
     "@importantimport/tsconfig": "^1.0.0-beta.2",
-    "@types/node": "^22.19.3",
-    "@xsai/generate-text": "^0.1.3",
+    "@types/node": "^24.10.4",
+    "@xsai/generate-text": "^0.4.1",
     "bumpp": "^10.3.2",
     "eslint": "^9.39.2",
     "hono": "^4.11.3",
