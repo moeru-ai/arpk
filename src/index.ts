@@ -26,7 +26,7 @@ if (argv.command === 'serve') {
   console.log(`Server is running on port ${argv.flags.port}`)
   serveApp({
     apiKey: argv.flags.apiKey,
-    baseURL: argv.flags.baseURL,
+    baseURL: argv.flags.baseUrl,
     model: argv.flags.model,
     port: argv.flags.port,
     token: argv.flags.token,
@@ -42,7 +42,7 @@ else if (argv.command === 'translate') {
   // eslint-disable-next-line antfu/no-top-level-await, no-console
   console.log(await generateTranslate({
     apiKey: argv.flags.apiKey,
-    baseURL: argv.flags.baseURL,
+    baseURL: argv.flags.baseUrl,
     model: argv.flags.model,
     source_lang: argv.flags.from,
     target_lang: argv.flags.to!,

@@ -1,7 +1,7 @@
 # https://hono.dev/docs/getting-started/nodejs#dockerfile
 # https://pnpm.io/docker#example-1-build-a-bundle-in-a-docker-container
 
-FROM node:23-alpine AS base
+FROM node:24-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
@@ -19,5 +19,5 @@ FROM base AS runner
 COPY --from=deps /app/node_modules /app/node_modules
 COPY --from=dist /app/dist /app/dist
 EXPOSE 1188
-ENTRYPOINT ["node", "/app/dist/cli.js"]
+ENTRYPOINT ["node", "/app/dist/index.js"]
 CMD ["serve"]
