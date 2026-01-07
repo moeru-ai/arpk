@@ -19,5 +19,5 @@ FROM base AS runner
 COPY --from=deps /app/node_modules /app/node_modules
 COPY --from=dist /app/dist /app/dist
 EXPOSE 1188
-ENTRYPOINT ["node", "/app/dist/cli.js"]
+ENTRYPOINT ["node", "/app/dist/index.js"]
 CMD ["serve"]
