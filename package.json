@@ -30,11 +30,11 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "cleye": "^2.2.1"
+    "cleye": "^2.2.1",
+    "srvx": "^0.10.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
-    "@hono/node-server": "^1.19.7",
     "@moeru/eslint-config": "0.1.0-beta.14",
     "@moeru/tsconfig": "0.1.0-beta.14",
     "@types/node": "^24.10.4",

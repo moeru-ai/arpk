@@ -9,6 +9,7 @@ words:
   - moeru
   - ollama
   - qwen
+  - srvx
   - xsai
 ignoreWords: []
 import: []

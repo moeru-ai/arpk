@@ -1,9 +1,9 @@
 import type { CreateTranslateOptions } from './translate'
 
-import { serve } from '@hono/node-server'
 import { logger } from 'hono/logger'
 import { prettyJSON } from 'hono/pretty-json'
 import { Hono } from 'hono/tiny'
+import { FastResponse, serve } from 'srvx'
 
 import { version } from '../../package.json'
 import { createTranslate } from './translate'
@@ -25,6 +25,9 @@ export const createApp = ({ apiKey, baseURL, model, token }: Omit<ServeAppOption
 }
 
 export const serveApp = ({ apiKey, baseURL, model, port, token }: ServeAppOptions) => {
+  /** @see {@link https://srvx.h3.dev/guide/node#fastresponse} */
+  globalThis.Response = FastResponse
+
   const { fetch } = createApp({ apiKey, baseURL, model, token })
 
   serve({ fetch, port })
