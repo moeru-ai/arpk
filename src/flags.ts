@@ -15,4 +15,8 @@ export const flags = {
     default: env.ARPK_LLM_MODEL ?? 'llama3.2',
     type: String,
   },
+  seed: {
+    default: env.ARPK_LLM_SEED != null ? Number.parseInt(env.ARPK_LLM_SEED) : undefined,
+    type: Number,
+  },
 } satisfies Command['options']['flags']

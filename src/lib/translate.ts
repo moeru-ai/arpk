@@ -8,12 +8,14 @@ export interface TranslateOptions extends RequestBody {
   apiKey?: string
   baseURL: string
   model: string
+  seed?: number
 }
 
 export const generateTranslate = async ({
   apiKey,
   baseURL,
   model,
+  seed,
   source_lang,
   target_lang,
   text,
@@ -31,4 +33,5 @@ export const generateTranslate = async ({
     },
   ],
   model,
+  seed,
 }).then(({ text }) => text)

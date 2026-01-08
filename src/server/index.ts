@@ -12,8 +12,8 @@ export interface ServeAppOptions extends CreateTranslateOptions {
   port: number
 }
 
-export const createApp = ({ apiKey, baseURL, model, token }: Omit<ServeAppOptions, 'port'>) => {
-  const translate = createTranslate({ apiKey, baseURL, model, token })
+export const createApp = (options: Omit<ServeAppOptions, 'port'>) => {
+  const translate = createTranslate(options)
 
   return new Hono()
     .use(logger())
@@ -24,11 +24,11 @@ export const createApp = ({ apiKey, baseURL, model, token }: Omit<ServeAppOption
     .use(prettyJSON())
 }
 
-export const serveApp = ({ apiKey, baseURL, model, port, token }: ServeAppOptions) => {
+export const serveApp = ({ port, ...options }: ServeAppOptions) => {
   /** @see {@link https://srvx.h3.dev/guide/node#fastresponse} */
   globalThis.Response = FastResponse
 
-  const { fetch } = createApp({ apiKey, baseURL, model, token })
+  const { fetch } = createApp(options)
 
   serve({ fetch, port })
 }

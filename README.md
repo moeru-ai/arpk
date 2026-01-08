@@ -110,6 +110,7 @@ await fetch('http://127.0.0.1:1188/translate', {
 | ARPK_LLM_API_KEY | null | OpenAI-compatible API key |
 | ARPK_LLM_BASE_URL | http://127.0.0.1:11434/v1/ | OpenAI-compatible API base url |
 | ARPK_LLM_MODEL | llama3.2 | Model to be used by the ARPK |
+| ARPK_LLM_SEED | null | Seed to be used by the ARPK |
 | ARPK_SYSTEM_PROMPT | https://github.com/moeru-ai/arpk/blob/main/src/lib/prompts.ts | System prompt |
 | ARPK_SOURCE_LANG | null | Translate source language (cli only, `--from`) |
 | ARPK_TARGET_LANG | null | Translate target language (cli only, `--to`) |

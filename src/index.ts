@@ -33,6 +33,7 @@ if (argv.command === 'serve') {
     baseURL: argv.flags.baseUrl,
     model: argv.flags.model,
     port: argv.flags.port,
+    seed: argv.flags.seed,
     token: argv.flags.token,
   })
 }
@@ -48,6 +49,7 @@ else if (argv.command === 'translate') {
     apiKey: argv.flags.apiKey,
     baseURL: argv.flags.baseUrl,
     model: argv.flags.model,
+    seed: argv.flags.seed,
     source_lang: argv.flags.from,
     target_lang: argv.flags.to!,
     text: argv.flags.input,

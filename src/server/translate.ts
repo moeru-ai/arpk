@@ -10,6 +10,7 @@ export interface CreateTranslateOptions {
   apiKey?: string
   baseURL: string
   model: string
+  seed?: number
   token?: string
 }
 
@@ -22,6 +23,7 @@ export const createTranslate = ({
   apiKey,
   baseURL,
   model,
+  seed,
   token,
 }: CreateTranslateOptions) => {
   const app = new Hono()
@@ -37,6 +39,7 @@ export const createTranslate = ({
         apiKey,
         baseURL,
         model,
+        seed,
         source_lang,
         target_lang,
         text,
