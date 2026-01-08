@@ -1,6 +1,10 @@
 /** @see {@link https://developers.deepl.com/docs/api-reference/languages} */
 export const generatedLanguages = [
   {
+    language: 'AR',
+    name: 'Arabic',
+  },
+  {
     language: 'BG',
     name: 'Bulgarian',
   },
@@ -31,6 +35,10 @@ export const generatedLanguages = [
   {
     language: 'ES',
     name: 'Spanish',
+  },
+  {
+    language: 'ES-419',
+    name: 'Spanish (Latin American)',
   },
   {
     language: 'ET',
@@ -74,7 +82,7 @@ export const generatedLanguages = [
   },
   {
     language: 'NB',
-    name: 'Norwegian (Bokm\u00E5l)',
+    name: 'Norwegian (Bokmål)',
   },
   {
     language: 'NL',
@@ -127,5 +135,9 @@ export const generatedLanguages = [
   {
     language: 'ZH-HANS',
     name: 'Chinese (simplified)',
+  },
+  {
+    language: 'ZH-HANT',
+    name: 'Chinese (traditional)',
   },
 ]
