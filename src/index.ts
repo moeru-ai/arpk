@@ -1,6 +1,7 @@
 /* eslint-disable @masknet/no-top-level */
+import { loadEnvFile } from 'node:process'
+
 import { cli } from 'cleye'
-import { config } from 'dotenv'
 
 import { name, version } from '../package.json' with { type: 'json' }
 import { serve } from './commands/serve'
@@ -9,7 +10,10 @@ import { flags } from './flags'
 import { generateTranslate } from './lib/translate'
 import { serveApp } from './server'
 
-config()
+try {
+  loadEnvFile()
+}
+catch {}
 
 const argv = cli({
   commands: [

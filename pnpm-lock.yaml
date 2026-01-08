@@ -11,9 +11,6 @@ importers:
       cleye:
         specifier: ^2.2.1
         version: 2.2.1
-      dotenv:
-        specifier: ^17.2.3
-        version: 17.2.3
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^6.7.3

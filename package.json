@@ -30,8 +30,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "cleye": "^2.2.1",
-    "dotenv": "^17.2.3"
+    "cleye": "^2.2.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
