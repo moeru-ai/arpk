@@ -3,7 +3,7 @@ import type { PromptOptions } from '../lib/prompts'
 import { bearerAuth } from 'hono/bearer-auth'
 import { Hono } from 'hono/tiny'
 
-import { version } from '../../package.json' with { type: 'json' }
+import { version } from '../../package.json'
 import { generateTranslate } from '../lib/translate'
 
 export interface CreateTranslateOptions {

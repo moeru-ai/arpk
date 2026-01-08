@@ -3,7 +3,7 @@ import { loadEnvFile } from 'node:process'
 
 import { cli } from 'cleye'
 
-import { name, version } from '../package.json' with { type: 'json' }
+import { name, version } from '../package.json'
 import { serve } from './commands/serve'
 import { translate } from './commands/translate'
 import { flags } from './flags'

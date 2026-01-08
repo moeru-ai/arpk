@@ -5,7 +5,7 @@ import { logger } from 'hono/logger'
 import { prettyJSON } from 'hono/pretty-json'
 import { Hono } from 'hono/tiny'
 
-import { version } from '../../package.json' with { type: 'json' }
+import { version } from '../../package.json'
 import { createTranslate } from './translate'
 
 export interface ServeAppOptions extends CreateTranslateOptions {
