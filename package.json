@@ -36,8 +36,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
     "@hono/node-server": "^1.19.7",
-    "@importantimport/eslint-config": "^1.0.0-beta.2",
-    "@importantimport/tsconfig": "^1.0.0-beta.2",
+    "@moeru/eslint-config": "0.1.0-beta.14",
+    "@moeru/tsconfig": "0.1.0-beta.14",
     "@types/node": "^24.10.4",
     "@xsai/generate-text": "^0.4.1",
     "bumpp": "^10.3.2",

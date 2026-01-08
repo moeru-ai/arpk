@@ -1,5 +1,5 @@
 {
-  "extends": "@importantimport/tsconfig/app.json",
+  "extends": "@moeru/tsconfig",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
