@@ -1,14 +1,13 @@
 import { describe, expect, it } from 'vitest'
 
-import { version } from '../package.json' with { type: 'json' }
+import { version } from '../package.json'
 import { createApp } from '../src/server'
 
-// eslint-disable-next-line @masknet/no-top-level
 describe('translate', () => {
   // eslint-disable-next-line test/prefer-lowercase-title
   it('GET /translate', async () => {
     const date = Date.now()
-    const model = 'mistral-nemo'
+    const model = 'qwen3:4b-instruct'
     const app = createApp({ baseURL: 'http://localhost:11434/v1/', model })
 
     const source_lang = 'EN-US'
@@ -28,7 +27,6 @@ describe('translate', () => {
     expect(res.status).toBe(200)
     expect(json.alternates.length).toBe(0)
     expect(json.code).toBe(200)
-    // eslint-disable-next-line @masknet/unicode-specific-set
     expect(json.data).toBe('你好，世界！')
     expect(json.id).toBeGreaterThan(date)
     expect(json.method).toBe(`ARPK v${version} (${model})`)

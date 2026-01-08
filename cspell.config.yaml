@@ -4,8 +4,11 @@ dictionaryDefinitions: []
 dictionaries: []
 words:
   - arpk
+  - bumpp
   - cleye
   - moeru
+  - ollama
+  - qwen
   - xsai
 ignoreWords: []
 import: []
