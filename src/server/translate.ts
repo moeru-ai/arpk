@@ -23,26 +23,35 @@ export const createTranslate = ({
   baseURL,
   model,
   token,
-}: CreateTranslateOptions) => new Hono()
-  .post('/', ...(token !== undefined ? [bearerAuth({ token })] : []), async (c) => {
-    const { source_lang, target_lang, text } = await c.req.json<RequestBody>()
+}: CreateTranslateOptions) => {
+  const app = new Hono()
 
-    const data = await generateTranslate({
-      apiKey,
-      baseURL,
-      model,
-      source_lang,
-      target_lang,
-      text,
+  if (token != null)
+    app.use(bearerAuth({ token }))
+
+  app
+    .post('/', async (c) => {
+      const { source_lang, target_lang, text } = await c.req.json<RequestBody>()
+
+      const data = await generateTranslate({
+        apiKey,
+        baseURL,
+        model,
+        source_lang,
+        target_lang,
+        text,
+      })
+
+      return c.json({
+        alternates: [],
+        code: 200,
+        data,
+        id: Date.now(),
+        method: `ARPK v${version} (${model})`,
+        source_lang,
+        target_lang,
+      })
     })
 
-    return c.json({
-      alternates: [],
-      code: 200,
-      data,
-      id: Date.now(),
-      method: `ARPK v${version} (${model})`,
-      source_lang,
-      target_lang,
-    })
-  })
+  return app
+}
