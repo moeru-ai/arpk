@@ -17,7 +17,6 @@ export const generateTranslate = async ({
   source_lang,
   target_lang,
   text,
-
 }: TranslateOptions) => generateText({
   apiKey,
   baseURL,
