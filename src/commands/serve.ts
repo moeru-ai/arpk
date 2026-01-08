@@ -1,5 +1,6 @@
-import { command } from 'cleye'
 import { env } from 'node:process'
+
+import { command } from 'cleye'
 
 import { flags } from '../flags'
 

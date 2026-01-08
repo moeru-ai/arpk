@@ -1,7 +1,7 @@
+import type { PromptOptions } from '../lib/prompts'
+
 import { bearerAuth } from 'hono/bearer-auth'
 import { Hono } from 'hono/tiny'
-
-import type { PromptOptions } from '../lib/prompts'
 
 import { version } from '../../package.json' with { type: 'json' }
 import { generateTranslate } from '../lib/translate'

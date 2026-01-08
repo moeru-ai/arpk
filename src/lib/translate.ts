@@ -1,6 +1,6 @@
-import { generateText } from '@xsai/generate-text'
-
 import type { RequestBody } from '../server/translate'
+
+import { generateText } from '@xsai/generate-text'
 
 import { systemPrompt } from './prompts'
 
@@ -17,7 +17,7 @@ export const generateTranslate = async ({
   source_lang,
   target_lang,
   text,
-// eslint-disable-next-line @masknet/no-then
+
 }: TranslateOptions) => generateText({
   apiKey,
   baseURL,
