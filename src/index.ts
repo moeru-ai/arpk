@@ -26,8 +26,6 @@ const argv = cli({
 })
 
 if (argv.command === 'serve') {
-  // eslint-disable-next-line no-console
-  console.log(`Server is running on port ${argv.flags.port}`)
   serveApp({
     apiKey: argv.flags.apiKey,
     baseURL: argv.flags.baseUrl,
